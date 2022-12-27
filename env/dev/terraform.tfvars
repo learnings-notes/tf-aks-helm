@@ -1,6 +1,4 @@
 projectName = "tftemplate"
 env         = "dev"
 location    = "eastus"
-appId       = "test-app-id"
-password    = "password"
 clustername = "testing"
