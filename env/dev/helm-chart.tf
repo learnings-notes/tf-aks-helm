@@ -7,8 +7,8 @@
 } */
 
 data "azurerm_kubernetes_cluster" "cluster" {
-  name                = "${var.clustername}-aks" #data.terraform_remote_state.aks.outputs.kubernetes_cluster_name
-  resource_group_name = "${var.clustername}-k8s" #data.terraform_remote_state.aks.outputs.resource_group_name
+  name                = azurerm_kubernetes_cluster.default.name #data.terraform_remote_state.aks.outputs.kubernetes_cluster_name
+  resource_group_name = azurerm_resource_group.default.name     #data.terraform_remote_state.aks.outputs.resource_group_name
   depends_on = [
     azurerm_kubernetes_cluster.default
 
